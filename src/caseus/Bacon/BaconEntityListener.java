@@ -25,7 +25,10 @@ public class BaconEntityListener extends EntityListener {
 				List<ItemStack> drops = event.getDrops();
 				
 				for(int i=0; i < drops.size(); i++){
-					drops.get(i).setTypeId(320);
+					ItemStack drop = drops.get(i);
+					if(drop.getTypeId() == 319){
+						drop.setTypeId(320);
+					}
 				}
 			}
 		}
