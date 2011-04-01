@@ -21,7 +21,7 @@ public class Bacon extends JavaPlugin {
 	public void onEnable() {
 	    // Register our events
 	    PluginManager pm = getServer().getPluginManager();
-	    pm.registerEvent(Event.Type.ENTITY_DAMAGED, entityListener, Priority.Normal, this);
+	    pm.registerEvent(Event.Type.ENTITY_DAMAGE, entityListener, Priority.Normal, this);
 	    pm.registerEvent(Event.Type.ENTITY_DEATH, entityListener, Priority.Normal, this);
 	    
 	    // EXAMPLE: Custom code, here we just output some info so we can check all is well
